@@ -8,3 +8,11 @@ $fonts-path : "../fonts/";
 $trikoder-style-name : "3K_frontend_task_icon_font";
 
 $global-font-style : "Lato";
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+$breakpoint-medium : 30em;
+$grid-max-width : 65em;
+$grid-columns : 12;
