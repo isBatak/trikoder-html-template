@@ -82,6 +82,15 @@ module.exports = function (grunt) {
                 }
             }
         },
+        // Autoprefixer setup
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
+            files: {
+                src: 'css/style.css'
+            }
+        },
         // Bower task sets up require config
         bower: {
             all: {
