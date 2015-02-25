@@ -1,0 +1,13 @@
+@mixin font-face($style-name, $file, $family, $weight:"normal") {
+    $filepath: $fonts-path + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+    	src:url($filepath + ".eot?-8dgc68");
+    	src:url($filepath + ".eot?#iefix-8dgc68") format('embedded-opentype'),
+    		url($filepath + ".woff?-8dgc68") format('woff'),
+    		url($filepath + ".ttf?-8dgc68") format('truetype'),
+    		url($filepath + ".svg?-8dgc68#" + $style-name + "") format('svg');
+    	font-weight: '#{$weight}';
+    	font-style: '#{$weight}';
+    }
+}

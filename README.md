@@ -26,8 +26,8 @@ CSS
 - [ ] nije preporučeno koristiti CSS framework-e
 - [ ] preporučeno je koristiti CSS3
 - [ ] potrebno je razdvojiti scss fileove po komponentama (header, slider, navigacija i slično)
-- [ ] poželjno je postaviti sass-watch file unutar bin foldera ili pokrenuti sam sass-watch kroz grunt task
-- [ ] ikone je preporučeno izvesti u SVG ili font formatu
+- [x] poželjno je postaviti sass-watch file unutar bin foldera ili pokrenuti sam sass-watch kroz grunt task
+- [x] ikone je preporučeno izvesti u SVG ili font formatu
 - [ ] za prikaz fonta (tekst) se koristi google fonts
 
 Javascript

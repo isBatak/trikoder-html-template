@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['scss/**/*.scss'],
-                tasks: (hasSass) ? ['sass:dev'] : null,
+                tasks: (hasSass) ? ['sass:dev', 'autoprefixer'] : null,
                 options: {
                     livereload: true
                 }
@@ -23,6 +23,12 @@ module.exports = function (grunt) {
             },
             php: {
                 files: ['**/*.php'],
+                options: {
+                    livereload: true
+                }
+            },
+            html: {
+                files: ['**/*.html'],
                 options: {
                     livereload: true
                 }

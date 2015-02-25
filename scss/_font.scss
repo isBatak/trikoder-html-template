@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+html,body {
+   font-family: $global-font-style, sans-serif;
+}
+
+@include font-face($trikoder-style-name, $trikoder-style-name, $trikoder-style-name);
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: $trikoder-style-name;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-kilococach_icon_fonts_template-84:before {
+	content: "\e600";
+}
+.icon-kilococach_icon_fonts_template-85:before {
+	content: "\e601";
+}
+.icon-kilococach_icon_fonts_template-86:before {
+	content: "\e602";
+}
+.icon-kilococach_icon_fonts_template-87:before {
+	content: "\e603";
+}
+.icon-kilococach_icon_fonts_template-88:before {
+	content: "\e604";
+}
+.icon-kilococach_icon_fonts_template-89:before {
+	content: "\e605";
+}
+.icon-kilococach_icon_fonts_template-90:before {
+	content: "\e606";
+}
