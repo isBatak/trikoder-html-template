@@ -1,3 +1,13 @@
 html, body{
     min-height: 100%;
+    background-color: $tertiary-color;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
 }

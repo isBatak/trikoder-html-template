@@ -18,7 +18,7 @@ $global-font-style : "Lato";
    ========================================================================== */
 
 $breakpoint-medium : 30em;
-$grid-max-width : 65em;
+$grid-max-width : 1170px;
 $grid-columns : 12;
 
 /* ==========================================================================
@@ -26,6 +26,11 @@ $grid-columns : 12;
    ========================================================================== */
 
 $primary-color : #d04144;
+$secondary-color : #ffffff;
+$tertiary-color : #f7f7f7;
 
-$text-color-light : #ffffff;
+$text-color-light : $secondary-color;
 $text-color-dark : #333333;
+$text-color-semidark : #666666;
+
+$separator-color : darken($tertiary-color, 10%);

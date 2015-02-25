@@ -1,0 +1,12 @@
+@include placeholder {
+  color: $secondary-color;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"]{
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid $secondary-color;
+}
