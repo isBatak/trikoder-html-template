@@ -480,6 +480,10 @@ html, body {
   background-color: #f7f7f7;
 }
 
+:focus {
+  outline: 0;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -616,13 +620,21 @@ img {
 .brand .logo {
   color: #ffffff;
   display: inline-block;
-  font-size: 75px;
+  font-size: 100px;
   padding: 35px 0;
 }
 
 .search {
   float: right;
   color: #ffffff;
+  position: relative;
+  margin-top: 60px;
+}
+.search span {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  font-size: 20px;
 }
 
 .mobile-friendly-menu {
@@ -646,10 +658,10 @@ img {
   padding: 23px 0;
   border-bottom: 2px solid #ffffff;
 }
-.mobile-friendly-menu nav ul li a:hover {
+.mobile-friendly-menu nav ul li a:hover, .mobile-friendly-menu nav ul li span:hover {
   border-bottom: 2px solid #dedede;
 }
-.mobile-friendly-menu nav ul li a:active {
+.mobile-friendly-menu nav ul li a:active, .mobile-friendly-menu nav ul li span:active {
   color: #d04144;
   border-bottom: 2px solid #d04144;
   cursor: pointer;
@@ -712,4 +724,17 @@ input[type="search"] {
   background: transparent;
   border: none;
   border-bottom: 1px solid #ffffff;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 50px;
+}
+input[type="email"].big,
+input[type="number"].big,
+input[type="password"].big,
+input[type="search"].big {
+  width: 590px;
+}
+
+.with-right-icon {
+  padding: 0 25px 0 0;
 }

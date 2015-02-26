@@ -3,6 +3,8 @@ html, body{
     background-color: $tertiary-color;
 }
 
+:focus {outline:0;}
+
 ol, ul {
 	list-style: none;
 }
