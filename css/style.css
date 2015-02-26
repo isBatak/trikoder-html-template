@@ -421,6 +421,9 @@ th {
    Colors
    ========================================================================== */
 /* ==========================================================================
+   Dimensions
+   ========================================================================== */
+/* ==========================================================================
    Fonts
    ========================================================================== */
 html, body {
@@ -603,6 +606,7 @@ img {
   position: relative;
   background: url("../images/header-bkg.jpg") no-repeat center top fixed;
   background-size: cover;
+  z-index: 1000;
 }
 .header .overlay {
   position: absolute;
@@ -664,7 +668,6 @@ img {
   position: relative;
   background-color: #ffffff;
   border-bottom: 1px solid #dedede;
-  z-index: 1;
 }
 .mobile-friendly-menu nav ul {
   display: block;
@@ -729,7 +732,27 @@ img {
 }
 
 @media only screen and (max-width: 30em) {
+  .outer-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .inner-wrapper {
+    position: relative;
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+  }
+  .inner-wrapper.open {
+    -webkit-transform: translate3d(220px, 0, 0);
+            transform: translate3d(220px, 0, 0);
+  }
+
   .header {
+    position: static;
     background: #d04144;
   }
   .header .overlay {
@@ -754,7 +777,8 @@ img {
     margin-top: 0;
     background: #ffffff;
     padding: 10px 20px 20px 20px;
-    z-index: 9999;
+    z-index: 20;
+    display: none;
   }
   .search input[type="search"] {
     color: #d04144;
@@ -780,6 +804,67 @@ img {
     top: -15px;
     right: 10px;
     display: inline-block;
+  }
+  .search.open {
+    display: block;
+  }
+
+  .mobile-friendly-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -220px;
+    width: 220px;
+    background: #f7f7f7;
+    z-index: 9999;
+    border-right: 1px solid #dedede;
+  }
+  .mobile-friendly-menu nav ul {
+    display: block;
+  }
+  .mobile-friendly-menu nav ul li {
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0 20px;
+  }
+  .mobile-friendly-menu nav ul li a, .mobile-friendly-menu nav ul li span {
+    font-size: 14px;
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #dedede;
+  }
+  .mobile-friendly-menu nav ul li a:hover, .mobile-friendly-menu nav ul li span:hover {
+    border-bottom: 1px solid #dedede;
+  }
+  .mobile-friendly-menu nav ul li a:active, .mobile-friendly-menu nav ul li span:active {
+    color: #d04144;
+    border-bottom: 1px solid #d04144;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .mobile-friendly-menu nav ul .current a, .mobile-friendly-menu nav ul .current span {
+    border-bottom: 1px solid #d04144;
+  }
+  .mobile-friendly-menu .login {
+    float: none;
+  }
+  .mobile-friendly-menu .login a {
+    background: #ffffff;
+    font-size: 14px;
+    padding: 21px 20px;
+    border-bottom: 1px solid #dedede;
+  }
+  .mobile-friendly-menu .login a [class*='icon-'] {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  .mobile-friendly-menu .login a:hover {
+    border-bottom: 1px solid #dedede;
+  }
+  .mobile-friendly-menu .login a:active {
+    background: #f7f7f7;
+    border-bottom: 1px solid #dedede;
   }
 }
 ::-webkit-input-placeholder {
@@ -860,6 +945,26 @@ input[type="search"].big {
   background: #b22c2f;
 }
 
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background: #d04144;
+  font-size: 16px;
+  color: #ffffff;
+}
+.footer .copy {
+  text-align: right;
+}
+
+@media only screen and (max-width: 30em) {
+  .footer {
+    font-size: 13px;
+  }
+  .footer .copy {
+    text-align: center;
+  }
+}
 .arrow-up {
   width: 0;
   height: 0;

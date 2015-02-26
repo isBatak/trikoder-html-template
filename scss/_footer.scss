@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background: $primary-color;
+    font-size: 16px;
+    color: $text-color-light;
+    .copy {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+    .footer {
+        font-size: 13px;
+        .copy {
+            text-align: center;
+        }
+    }
+}
