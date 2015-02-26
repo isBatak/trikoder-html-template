@@ -747,11 +747,14 @@ img {
   }
 
   .search {
+    position: absolute;
+    width: 100%;
     color: #d04144;
     float: none;
     margin-top: 0;
     background: #ffffff;
     padding: 10px 20px 20px 20px;
+    z-index: 9999;
   }
   .search input[type="search"] {
     color: #d04144;
