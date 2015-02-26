@@ -639,8 +639,9 @@ img {
 .search {
   float: right;
   color: #ffffff;
-  position: relative;
-  margin-top: 60px;
+  position: absolute;
+  top: 60px;
+  right: 0;
 }
 .search input[type="search"]::-webkit-input-placeholder {
   color: #ffffff;
@@ -770,7 +771,6 @@ img {
   }
 
   .search {
-    position: absolute;
     width: 100%;
     color: #d04144;
     float: none;

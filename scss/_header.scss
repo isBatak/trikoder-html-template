@@ -38,8 +38,9 @@
 .search {
     float: right;
     color: $secondary-color;
-    position: relative;
-    margin-top: 60px;
+    position: absolute;
+    top: 60px;
+    right: 0;
     input[type="search"] {
         @include placeholder {
             color: $secondary-color;
@@ -163,7 +164,6 @@
         }
     }
     .search {
-        position: absolute;
         width: 100%;
         color: $primary-color;
         float: none;
