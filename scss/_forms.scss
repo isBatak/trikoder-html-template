@@ -1,14 +1,15 @@
 @include placeholder {
-    color: $secondary-color;
+    color: $text-color-semidark;
 }
 
 input[type="email"],
-input[type="number"],
 input[type="password"],
-input[type="search"]{
+input[type="search"] {
     background: transparent;
+    color: $primary-color;
     border:none;
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 1px solid $primary-color;
+    box-sizing: border-box;
     font : {
         weight: 300;
         size: 24px;
@@ -21,4 +22,19 @@ input[type="search"]{
 
 .with-right-icon{
     padding: 0 25px 0 0;
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+    input[type="email"],
+    input[type="password"],
+    input[type="search"] {
+        line-height: 30px;
+        font : {
+            size: 13px;
+        }
+        &.big {
+            width: 100%;
+        }
+    }
+
 }

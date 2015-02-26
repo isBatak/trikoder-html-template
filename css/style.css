@@ -521,6 +521,7 @@ img {
 .container {
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .container, .row {
@@ -612,10 +613,17 @@ img {
   background-color: rgba(208, 65, 68, 0.9);
   z-index: 0;
 }
+.header .button {
+  display: none;
+}
 
 .brand {
   position: relative;
   z-index: 1;
+}
+.brand input[type="search"] {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 .brand .logo {
   color: #ffffff;
@@ -630,11 +638,26 @@ img {
   position: relative;
   margin-top: 60px;
 }
+.search input[type="search"]::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.search input[type="search"]:-moz-placeholder {
+  color: #ffffff;
+}
+.search input[type="search"]::-moz-placeholder {
+  color: #ffffff;
+}
+.search input[type="search"]:-ms-input-placeholder {
+  color: #ffffff;
+}
 .search span {
   position: absolute;
   right: 0;
   top: 15px;
   font-size: 20px;
+}
+.search .triangle {
+  display: none;
 }
 
 .mobile-friendly-menu {
@@ -705,31 +728,82 @@ img {
   cursor: hand;
 }
 
+@media only screen and (max-width: 30em) {
+  .header {
+    background: #d04144;
+  }
+  .header .overlay {
+    display: none;
+  }
+  .header .button {
+    display: inline-block;
+  }
+
+  .brand .logo {
+    font-size: 50px;
+    padding: 0;
+    text-align: center;
+    display: block;
+  }
+
+  .search {
+    color: #d04144;
+    float: none;
+    margin-top: 0;
+    background: #ffffff;
+    padding: 10px 20px 20px 20px;
+  }
+  .search input[type="search"] {
+    color: #d04144;
+    border-bottom: 1px solid #d04144;
+  }
+  .search input[type="search"]::-webkit-input-placeholder {
+    color: #d04144;
+  }
+  .search input[type="search"]:-moz-placeholder {
+    color: #d04144;
+  }
+  .search input[type="search"]::-moz-placeholder {
+    color: #d04144;
+  }
+  .search input[type="search"]:-ms-input-placeholder {
+    color: #d04144;
+  }
+  .search span {
+    right: 20px;
+  }
+  .search .triangle {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    display: inline-block;
+  }
+}
 ::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #666666;
 }
 :-moz-placeholder {
-  color: #ffffff;
+  color: #666666;
 }
 ::-moz-placeholder {
-  color: #ffffff;
+  color: #666666;
 }
 :-ms-input-placeholder {
-  color: #ffffff;
+  color: #666666;
 }
 input[type="email"],
-input[type="number"],
 input[type="password"],
 input[type="search"] {
   background: transparent;
+  color: #d04144;
   border: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #d04144;
+  box-sizing: border-box;
   font-weight: 300;
   font-size: 24px;
   line-height: 50px;
 }
 input[type="email"].big,
-input[type="number"].big,
 input[type="password"].big,
 input[type="search"].big {
   width: 590px;
@@ -737,4 +811,56 @@ input[type="search"].big {
 
 .with-right-icon {
   padding: 0 25px 0 0;
+}
+
+@media only screen and (max-width: 30em) {
+  input[type="email"],
+  input[type="password"],
+  input[type="search"] {
+    line-height: 30px;
+    font-size: 13px;
+  }
+  input[type="email"].big,
+  input[type="password"].big,
+  input[type="search"].big {
+    width: 100%;
+  }
+}
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.button {
+  background: #d04144;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 24px;
+}
+.button:active {
+  background: #b22c2f;
+}
+.button.menu {
+  float: left;
+  margin: 5px 0 0 5px;
+}
+.button.magnifier {
+  float: right;
+  margin: 5px 5px 0 0;
+}
+
+.no-touch .button:hover {
+  background: #da6a6c;
+}
+.no-touch .button:active {
+  background: #b22c2f;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ffffff;
 }

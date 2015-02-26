@@ -15,10 +15,18 @@
         background-color: rgba(red($primary-color), green($primary-color), blue($primary-color), 0.9);
         z-index: 0;
     }
+
+    .button {
+        display: none;
+    }
 }
 .brand {
     position: relative;
     z-index: 1;
+    input[type="search"] {
+        color: $secondary-color;
+        border-bottom: 1px solid $secondary-color;
+    }
     .logo{
         color: $secondary-color;
         display: inline-block;
@@ -31,6 +39,11 @@
     color: $secondary-color;
     position: relative;
     margin-top: 60px;
+    input[type="search"] {
+        @include placeholder {
+            color: $secondary-color;
+        }
+    }
     span {
         position: absolute;
         right: 0;
@@ -38,6 +51,9 @@
         font: {
             size: 20px;
         }
+    }
+    .triangle {
+        display: none;
     }
 }
 .mobile-friendly-menu {
@@ -109,6 +125,49 @@
                 cursor: pointer;
                 cursor: hand;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+    .header {
+        background: $primary-color;
+        .overlay{
+            display: none;
+        }
+        .button {
+            display: inline-block;
+        }
+    }
+    .brand {
+        .logo{
+            font-size: 50px;
+            padding: 0;
+            text-align: center;
+            display: block;
+        }
+    }
+    .search {
+        color: $primary-color;
+        float: none;
+        margin-top: 0;
+        background: $secondary-color;
+        padding: 10px 20px 20px 20px;
+        input[type="search"] {
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
+            @include placeholder {
+                color: $primary-color;
+            }
+        }
+        span {
+            right: 20px;
+        }
+        .triangle {
+            position: absolute;
+            top: -15px;
+            right: 10px; 
+            display: inline-block;
         }
     }
 }
