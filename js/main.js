@@ -12,4 +12,13 @@
     $('#search-button').click(function() {
         $('.search').toggleClass('open');
     });
+
+    /**
+    * Slider init
+    */
+    $('#slider').slider({
+        autoplay: true,
+        delay: 5000
+    });
+
 })(jQuery);

@@ -1,6 +1,7 @@
 html, body{
     min-height: 100%;
     background-color: $tertiary-color;
+    font-family: $global-font-style, sans-serif;
 }
 
 :focus {outline:0;}

@@ -1,10 +1,6 @@
 /* ==========================================================================
-   Fonts
+   Icons
    ========================================================================== */
-
-html,body {
-   font-family: $global-font-style, sans-serif;
-}
 
 @include font-face($trikoder-style-name, $trikoder-style-name, $trikoder-style-name);
 

@@ -424,12 +424,41 @@ th {
    Dimensions
    ========================================================================== */
 /* ==========================================================================
-   Fonts
+   Border
    ========================================================================== */
+.container, .row, .slider-outer-wrapper ul.slider-inner-wrapper {
+  *zoom: 1;
+}
+.container:before, .row:before, .slider-outer-wrapper ul.slider-inner-wrapper:before, .container:after, .row:after, .slider-outer-wrapper ul.slider-inner-wrapper:after {
+  content: " ";
+  display: table;
+}
+.container:after, .row:after, .slider-outer-wrapper ul.slider-inner-wrapper:after {
+  clear: both;
+}
+
 html, body {
+  min-height: 100%;
+  background-color: #f7f7f7;
   font-family: "Lato", sans-serif;
 }
 
+:focus {
+  outline: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: #d04144;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Icons
+   ========================================================================== */
 @font-face {
   font-family: "3K_frontend_task_icon_font";
   src: url("../fonts/3K_frontend_task_icon_font/3K_frontend_task_icon_font.eot?-8dgc68");
@@ -478,24 +507,6 @@ html, body {
   content: "\e606";
 }
 
-html, body {
-  min-height: 100%;
-  background-color: #f7f7f7;
-}
-
-:focus {
-  outline: 0;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-a {
-  color: #d04144;
-  text-decoration: none;
-}
-
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -527,14 +538,14 @@ img {
   position: relative;
 }
 
-.container, .row {
+.container, .row, .slider-outer-wrapper ul.slider-inner-wrapper {
   *zoom: 1;
 }
-.container:before, .row:before, .container:after, .row:after {
+.container:before, .row:before, .slider-outer-wrapper ul.slider-inner-wrapper:before, .container:after, .row:after, .slider-outer-wrapper ul.slider-inner-wrapper:after {
   content: " ";
   display: table;
 }
-.container:after, .row:after {
+.container:after, .row:after, .slider-outer-wrapper ul.slider-inner-wrapper:after {
   clear: both;
 }
 
@@ -943,6 +954,50 @@ input[type="search"].big {
 }
 .no-touch .button:active {
   background: #b22c2f;
+}
+
+.slider-outer-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  width: 100%;
+}
+.slider-outer-wrapper ul.slider-inner-wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider-outer-wrapper ul.slider-inner-wrapper li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-outer-wrapper ul.slider-inner-wrapper li .slide-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+  background: rgba(208, 65, 68, 0.9);
+  padding: 20px;
+}
+.slider-outer-wrapper .slider-bullets-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+.slider-outer-wrapper .slider-bullets-wrapper ul li {
+  display: inline-block;
+  background-image: url("../images/bullets.png");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  cursor: hand;
 }
 
 /* ==========================================================================

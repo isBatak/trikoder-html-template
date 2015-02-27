@@ -1,0 +1,46 @@
+.slider-outer-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: $borderRadius;
+    width: 100%;
+    ul.slider-inner-wrapper {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @extend %clearfix;
+        li {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            .slide-caption {
+                position: absolute;
+                bottom:0;
+                width: 100%;
+                color: $text-color-light;
+                background: rgba(red($primary-color), green($primary-color), blue($primary-color), 0.9);
+                padding: 20px;
+            }
+        }
+    }
+    .slider-bullets-wrapper {
+        position: relative;
+        width: 100%;
+        margin-top: $gutter;
+        ul{
+            li{
+                display: inline-block;
+                background-image: url($images-path + "bullets.png");
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+                cursor: hand;
+            }
+        }
+    }
+}
