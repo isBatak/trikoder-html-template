@@ -1,0 +1,59 @@
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	margin-bottom:$base-font-size;
+	color:$text-color-dark;
+}
+
+h2 {
+	font-size:$base-font-size + 4px;
+}
+
+h3 {
+	font-size:$base-font-size + 2px;
+}
+
+p {
+	margin:$base-font-size 0 $base-font-size 0;
+}
+
+strong {
+	font-weight: bold;
+	color: $text-color-dark;
+}
+
+em {
+	font-style:italic;
+}
+
+pre {
+	padding:$base-font-size / 2;
+	background:darken($tertiary-color, 2%);
+	border:1px solid darken($tertiary-color, 15%);
+	overflow-x:scroll;
+    border-radius: $borderRadius;
+	code {
+		background:none !important;
+	}
+}
+
+p code {
+	padding:0 3px 0 3px;
+	background:darken($tertiary-color, 2%);
+	border:1px solid darken($tertiary-color, 15%);
+    border-radius: $borderRadius;
+}
+
+code {
+	font-size:$base-font-size - 3px;
+	//font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+}
+
+a {
+    color: $primary-color;
+	text-decoration:none;
+	&:hover {
+		border-bottom-width:1px;
+		border-bottom-style:solid;
+	}
+}

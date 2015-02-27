@@ -2,15 +2,14 @@ html, body{
     min-height: 100%;
     background-color: $tertiary-color;
     font-family: $global-font-style, sans-serif;
+
+    /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 :focus {outline:0;}
 
 ol, ul {
 	list-style: none;
-}
-
-a {
-    color: $primary-color;
-    text-decoration: none;
 }
