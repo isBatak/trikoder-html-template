@@ -424,6 +424,9 @@ th {
    Dimensions
    ========================================================================== */
 /* ==========================================================================
+   Border
+   ========================================================================== */
+/* ==========================================================================
    Fonts
    ========================================================================== */
 html, body {
@@ -943,6 +946,50 @@ input[type="search"].big {
 }
 .no-touch .button:active {
   background: #b22c2f;
+}
+
+.slider-outer-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  width: 100%;
+}
+.slider-outer-wrapper ul.slider-inner-wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider-outer-wrapper ul.slider-inner-wrapper li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-outer-wrapper ul.slider-inner-wrapper li .slide-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+  background: rgba(208, 65, 68, 0.9);
+  padding: 20px;
+}
+.slider-outer-wrapper .slider-bullets-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+.slider-outer-wrapper .slider-bullets-wrapper ul li {
+  display: inline-block;
+  background-image: url("../images/bullets.png");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  cursor: hand;
 }
 
 /* ==========================================================================
