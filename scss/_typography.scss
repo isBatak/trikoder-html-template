@@ -1,3 +1,7 @@
+html, body{
+	color: $text-color-semidark;
+	font-size: 	$base-font-size;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight:bold;
@@ -6,11 +10,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	font-size:$base-font-size + 4px;
+	font-size:$base-font-size + 10px;
 }
 
 h3 {
 	font-size:$base-font-size + 2px;
+}
+
+h4 {
+	font-size:$base-font-size;
+}
+
+h5 {
+	font-size:$base-font-size - 3px;
 }
 
 p {
@@ -49,11 +61,54 @@ code {
 	//font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
+hr {
+	display: block;
+	height: 1px;
+    border: 0;
+	border-top: 1px solid $separator-color;
+    margin: 1em 0; padding: 0;
+}
+
 a {
     color: $primary-color;
 	text-decoration:none;
 	&:hover {
 		border-bottom-width:1px;
 		border-bottom-style:solid;
+	}
+}
+
+ol.numbers {
+	list-style-type: decimal;
+	margin: 0 0 0 $gutter/2;
+	padding: 0;
+	counter-reset: item;
+	>li {
+		margin: 0;
+		padding: 0 0 0 $gutter/2;
+		text-indent: -$gutter;
+		list-style-type: none;
+		counter-increment: item;
+		font : {
+			size : 16px;
+		}
+		line-height: $base-line-height * 1.5;
+		a {
+			color: $text-color-semidark;
+			&:hover {
+				color: $primary-color;
+			}
+			&:active {
+				color: $text-color-semidark;
+			}
+		}
+		&:before {
+			display: inline-block;
+			width: $gutter + 10px;
+			padding-right: $gutter/4;
+			font-weight: bold;
+			text-align: right;
+			content: counter(item) ".";
+		}
 	}
 }

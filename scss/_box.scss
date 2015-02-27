@@ -1,0 +1,114 @@
+.box {
+    background: $secondary-color;
+    border-radius: $borderRadius;
+    overflow: hidden;
+    margin-bottom: $gutter;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    .image {
+        background: $separator-color;
+        img {
+            vertical-align: middle;
+        }
+    }
+    .title {
+        h4 {
+            padding: $gutter/2 0;
+            margin:0;
+        }
+    }
+    .description {
+        padding: $gutter/2;
+        h2 {
+            padding-bottom: $base-font-size;
+        }
+    }
+    .info {
+        border-top: 1px solid $separator-color;
+        @extend %clearfix;
+        >div{
+            color: $text-color-semidark;
+            width: 33.33333%;
+            float: left;
+            padding: $gutter/2;
+            border-left: 1px solid $separator-color;
+            text-align: center;
+            &:first-child {
+                border: none;
+            }
+            span {
+                color: $text-color-semidark;
+                font : {
+                    size: 20px;
+                }
+            }
+            >div {
+                padding-top: 5px;
+                font : {
+                    size: 14px;
+                    weight: 400;
+                    style: italic;
+                }
+            }
+        }
+    }
+    .view-more {
+        text-align: right;
+        padding: $gutter/2;
+        position: relative;
+        a {
+            color: $primary-color;
+            background: $secondary-color;
+            position: relative;
+            padding-left: 5px;
+            font : {
+                size: 14px;
+                weight: 700;
+                style: italic;
+            }
+        }
+        .line {
+            position: absolute;
+            //width: 100%;
+            top: 29px;
+            left: $gutter/2;
+            right: $gutter/2;
+            border-top: 1px solid $separator-color;
+            box-sizing: border-box;
+        }
+    }
+    .thumb-posts {
+        padding: 0 $gutter/2 0 0;
+        >li {
+            height: 95px;
+            margin-top: $gutter;
+            &:first-child {
+                margin-top: 0;
+            }
+            a {
+                header {
+                    padding-left: 105px;
+                    h5 {
+                        padding-bottom: $gutter/2;
+                    }
+                }
+                p {
+                    padding-left: 105px;
+                    font-size: 13px;
+                    color: $text-color-semidark;
+                }
+                img {
+                    width: 95px;
+                    height: 95px;
+                    vertical-align: middle;
+                    float: left;
+                }
+            }
+        }
+    }
+    &.banner {
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+    }
+}

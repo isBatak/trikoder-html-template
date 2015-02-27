@@ -10,6 +10,13 @@ html, body{
 
 :focus {outline:0;}
 
-ol, ul {
+ul {
 	list-style: none;
+}
+
+.main {
+    padding-top: $gutter;
+    @media only screen and (max-width: $breakpoint-medium) {
+        padding: 0;
+    }
 }

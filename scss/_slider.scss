@@ -1,45 +1,79 @@
 .slider-outer-wrapper {
     position: relative;
-    overflow: hidden;
-    border-radius: $borderRadius;
     width: 100%;
-    ul.slider-inner-wrapper {
+    padding-bottom: $gutter;
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $separator-color;
+    .slider-inner-wrapper {
         position: relative;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        @extend %clearfix;
-        li {
+        overflow: hidden;
+        border-radius: $borderRadius;
+        ul{
             position: relative;
-            display: block;
-            float: left;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            .slide-caption {
-                position: absolute;
-                bottom:0;
+            list-style: none;
+            @extend %clearfix;
+            li {
+                position: relative;
+                display: block;
+                float: left;
+                margin: 0;
+                padding: 0;
                 width: 100%;
-                color: $text-color-light;
-                background: rgba(red($primary-color), green($primary-color), blue($primary-color), 0.9);
-                padding: 20px;
+                height: 100%;
+                img {
+                    vertical-align: middle;
+                }
+                .slide-caption {
+                    position: absolute;
+                    bottom:0;
+                    width: 100%;
+                    color: $text-color-light;
+                    background: rgba(red($primary-color), green($primary-color), blue($primary-color), 0.9);
+                    padding: 20px;
+                    font-size: 38px;
+                    font-weight: bold;
+                }
             }
         }
     }
     .slider-bullets-wrapper {
         position: relative;
-        width: 100%;
-        margin-top: $gutter;
+        margin: $gutter 0 0 50%;
+        display: inline-block;
         ul{
+            cursor: pointer;
+            cursor: hand;
+            white-space: nowrap;
+            display: inline-block;
+            margin-left: -50%;
             li{
                 display: inline-block;
                 background-image: url($images-path + "bullets.png");
                 background-repeat: no-repeat;
+                background-position: 0 -18px;
                 width: 18px;
                 height: 18px;
-                cursor: pointer;
-                cursor: hand;
+                margin: 0 5px;
+                &.selected {
+                    background-position: 0 0;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: $breakpoint-medium) {
+        background: $secondary-color;
+        .slider-inner-wrapper {
+            border-radius: 0;
+            ul li .slide-caption {
+                background: transparent;
+                position: relative;
+                color: $text-color-dark;
+                display: block;
+                font-size: 23px;
+                line-height: 35px;
+                padding-bottom: 0;
             }
         }
     }
