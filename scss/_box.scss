@@ -110,5 +110,19 @@
             vertical-align: middle;
             width: 100%;
         }
+        &.desktop {
+            display: block;
+        }
+        &.mobile {
+            display: none;
+        }
+        @media only screen and (max-width: $breakpoint-medium) {
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+            }
+        }
     }
 }

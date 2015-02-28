@@ -1255,6 +1255,20 @@ input[type="search"].big {
   vertical-align: middle;
   width: 100%;
 }
+.box.banner.desktop {
+  display: block;
+}
+.box.banner.mobile {
+  display: none;
+}
+@media only screen and (max-width: 30em) {
+  .box.banner.desktop {
+    display: none;
+  }
+  .box.banner.mobile {
+    display: block;
+  }
+}
 
 /* ==========================================================================
    Footer
@@ -1286,6 +1300,7 @@ input[type="search"].big {
   height: 100%;
   width: 100%;
   z-index: 1001;
+  display: none;
 }
 .modal .modal-overlay {
   position: absolute;

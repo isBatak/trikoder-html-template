@@ -15,7 +15,7 @@ Priloženi design
 Responsive
 - [x] navigacija je slide from left
 - [ ] dopuštena je sloboda prikaza na tablet varijaciji
-- [ ] oprez, banner element mijenja poziciju ovisno o mobile i desktop varijaciji
+- [x] oprez, banner element mijenja poziciju ovisno o mobile i desktop varijaciji
 
 HTML
 - [x] HTML5 sintaksa
