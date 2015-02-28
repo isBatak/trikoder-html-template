@@ -8,27 +8,27 @@ Općenito
 - [ ] preporučeno je load-ati vanjske library/framework-e pomoću package managera (npr. bower)
 
 Priloženi design
-- [ ] nije potrebno rezati dizajn u "pixel perfect” stilu, dopuštena su manja odstupanja od predloška
-- [ ] priloženi dizajn je u Illustrator i Photoshop formatu
-- [ ] priložen je icon font koji sadrži sve ikone u font formatu
+- [x] nije potrebno rezati dizajn u "pixel perfect” stilu, dopuštena su manja odstupanja od predloška
+- [x] priloženi dizajn je u Illustrator i Photoshop formatu
+- [x] priložen je icon font koji sadrži sve ikone u font formatu
 
 Responsive
-- [ ] navigacija je slide from left
+- [x] navigacija je slide from left
 - [ ] dopuštena je sloboda prikaza na tablet varijaciji
 - [ ] oprez, banner element mijenja poziciju ovisno o mobile i desktop varijaciji
 
 HTML
-- [ ] HTML5 sintaksa
-- [ ] nije preporučeno koristiti HTML framework-e
+- [x] HTML5 sintaksa
+- [x] nije preporučeno koristiti HTML framework-e
 
 CSS
-- [ ] korištenje SASS-a je obavezno
-- [ ] nije preporučeno koristiti CSS framework-e
-- [ ] preporučeno je koristiti CSS3
-- [ ] potrebno je razdvojiti scss fileove po komponentama (header, slider, navigacija i slično)
+- [x] korištenje SASS-a je obavezno
+- [x] nije preporučeno koristiti CSS framework-e
+- [x] preporučeno je koristiti CSS3
+- [x] potrebno je razdvojiti scss fileove po komponentama (header, slider, navigacija i slično)
 - [x] poželjno je postaviti sass-watch file unutar bin foldera ili pokrenuti sam sass-watch kroz grunt task
 - [x] ikone je preporučeno izvesti u SVG ili font formatu
-- [ ] za prikaz fonta (tekst) se koristi google fonts
+- [x] za prikaz fonta (tekst) se koristi google fonts
 
 Javascript
 - [ ] odvojene JS komponente trebaju se nalaziti u odvojenim fileovima
