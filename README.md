@@ -31,17 +31,17 @@ CSS
 - [x] za prikaz fonta (tekst) se koristi google fonts
 
 Javascript
-- [ ] odvojene JS komponente trebaju se nalaziti u odvojenim fileovima
+- [x] odvojene JS komponente trebaju se nalaziti u odvojenim fileovima
 - [ ] potrebno je napravit grunt task za minifikaciju i concat JS fileova
 
 Login
-- [ ] potrebno je prikazati login unutar popupa i submitati formu pomoću AJAX-a na script.php (nalazi se unutar dropbox foldera)
-- [ ] AJAX GET vraća html za login koji je potrebno includeati unutar popupa
-- [ ] AJAX POST sluzi za submit forme na php skriptu
-- [ ] u slučaju da su username i password ispravni, POST vrača status 200 u headeru, te je login uspješan pa je potrebno ispisati poruku korisniku o statusu
-- [ ] u slučaju da je nešto krivo kod submita forme, POST vraća status 400 u headeru i JSON s popisom grešaka. Potrebno je javiti korisniku koje i gdje su greške te to i naznačiti u login formi
-- [ ] html se slobodno može prilagoditi
-- [ ] testni podaci su -> username: “testuser”, password: “testpass"
+- [x] potrebno je prikazati login unutar popupa i submitati formu pomoću AJAX-a na script.php (nalazi se unutar dropbox foldera)
+- [x] AJAX GET vraća html za login koji je potrebno includeati unutar popupa
+- [x] AJAX POST sluzi za submit forme na php skriptu
+- [x] u slučaju da su username i password ispravni, POST vrača status 200 u headeru, te je login uspješan pa je potrebno ispisati poruku korisniku o statusu
+- [x] u slučaju da je nešto krivo kod submita forme, POST vraća status 400 u headeru i JSON s popisom grešaka. Potrebno je javiti korisniku koje i gdje su greške te to i naznačiti u login formi
+- [x] html se slobodno može prilagoditi
+- [x] testni podaci su -> username: “testuser”, password: “testpass"
 
 Priloženi fileovi:
 https://www.dropbox.com/sh/157i3wtb5m7719h/AACfTGt2hveTts2UY-j3KoQ-a?dl=0
