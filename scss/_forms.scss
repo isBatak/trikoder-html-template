@@ -3,6 +3,7 @@
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"],
 input[type="search"] {
     background: transparent;
@@ -24,8 +25,27 @@ input[type="search"] {
     padding: 0 25px 0 0;
 }
 
+%message {
+    font-size: $base-font-size - 4px;
+    text-align: center;
+    width: 100%;
+}
+
+.success{
+    color: $success-color;
+    float: left;
+    @extend %message;
+}
+
+.error{
+    color: $error-color;
+    float: left;
+    @extend %message;
+}
+
 @media only screen and (max-width: $breakpoint-medium) {
     input[type="email"],
+    input[type="text"],
     input[type="password"],
     input[type="search"] {
         line-height: 30px;

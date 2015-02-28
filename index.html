@@ -56,7 +56,7 @@
               <div class="container">
                   <!-- Login -->
                   <div class="login">
-                      <a href="#login">
+                      <a href="http://trikoder.dev/php/script.php" id="sign-in" data-type="modal" data-target="#modal-1">
                           <span class="icon-kilococach_icon_fonts_template-90"></span>
                           sign in
                       </a>
@@ -307,17 +307,24 @@
         </div>
     </div>
 
-    <div class="modal">
+    <!-- Modal -->
+    <div class="modal" id="modal-1" >
         <div class="modal-overlay"></div>
         <section class="box">
-            <form action="">
-                <input type="submit" class="button" value="Sign in" />
-            </form>
+            <header class="title">
+                <h3 class="separator">Sign in</h3>
+                <span class="icon-kilococach_icon_fonts_template-90"></span>
+                <button type="button" class="modal-close">
+                    <span>&times;</span>
+                </button>
+            </header>
+            <div class="content" data-success="Super pa ovo radi!"></div>
         </section>
     </div>
 
     <script src="js/vendor/jquery/jquery.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 
     <!-- livereload script -->

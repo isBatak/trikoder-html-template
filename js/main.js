@@ -21,4 +21,9 @@
         delay: 5000
     });
 
+    /**
+    * Modal init
+    */
+    $('#sign-in').modal();
+    
 })(jQuery);

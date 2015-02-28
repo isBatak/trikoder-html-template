@@ -87,7 +87,7 @@ jQuery(document).ready(function ($) {
             var slides = (this.element.firstElementChild || this.element.children[0] || {} ).children,
                 slideCount = slides.length;
 
-            if(this.options.autoplay == true) {
+            if(this.options.autoplay === true) {
                 self = this;
                 setInterval(function () {
                     self.moveRight(self.element, self.options);

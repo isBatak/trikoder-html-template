@@ -8,6 +8,7 @@
     padding: 10px;
     text-align: center;
     border-radius: $borderRadius;
+    border:0;
     display: inline-block;
     font: {
         size: 24px;
@@ -17,6 +18,10 @@
     }
     &:active {
         background: darken($primary-color, 10%);
+    }
+    &:disabled {
+        background: $separator-color;
+        color: $text-color-semidark;
     }
     &.menu {
         float: left;
