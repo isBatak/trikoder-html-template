@@ -1,6 +1,4 @@
-Poštovani,
-
-Zahvaljujem se na prijavi za poziciju front-end developera te vam u nastavku maila šaljem zadatak.
+TODO
 
 Općenito
 - [x] prilagodba je za sve aktualne verzije browsera (FF, CHROME, IE) + 2 verzije ispod
@@ -42,9 +40,3 @@ Login
 - [x] u slučaju da je nešto krivo kod submita forme, POST vraća status 400 u headeru i JSON s popisom grešaka. Potrebno je javiti korisniku koje i gdje su greške te to i naznačiti u login formi
 - [x] html se slobodno može prilagoditi
 - [x] testni podaci su -> username: “testuser”, password: “testpass"
-
-Priloženi fileovi:
-https://www.dropbox.com/sh/157i3wtb5m7719h/AACfTGt2hveTts2UY-j3KoQ-a?dl=0
-
-Rješenje zadatka je potrebno poslati na ovu e-mail adresu unutar 10 dana od primitka zadatka.
-Uz rješenje napišite kako ste saznali za naš natječaj i vrijeme koje Vam je bilo potrebno za rješavanje zadatka.
