@@ -2,6 +2,7 @@
 
     var pluginName = "modal",
         defaults = {
+            modalClass: '.box',
             content: '.content',
             closeButton: '.modal-close'
         };
@@ -24,6 +25,7 @@
             this.type = this.element.data('type');
             this.URL = this.element.attr('href');
             this.target = $(this.element.data('target'));
+            this.modalBox = this.target.find(this.options.modalClass);
             this.closeBtn = this.target.find(this.options.closeButton);
             this.content = this.target.find(this.options.content);
 
@@ -48,7 +50,7 @@
         },
 
         loadModal: function() {
-            console.log(this.element);
+
             this.target.toggleClass('open');
 
             if(this.URL !== '' || this.URL !== '#') {
@@ -72,7 +74,7 @@
                                     });
 
             this.usernameIn.attr('placeholder', textToPlaceholder.eq(0).text().trim().replace(':',''));
-            this.passwordIn.attr('placeholder', textToPlaceholder.eq(1).text().trim().replace(':',''));
+            this.passwordIn.attr('placeholder', textToPlaceholder.eq(1).text().trim().replace(':','')).attr('type','password');
             textToPlaceholder.remove();
 
             this.contactForm.contents().filter('br').remove();
