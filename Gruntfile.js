@@ -91,10 +91,20 @@ module.exports = function (grunt) {
                 src: 'css/style.css'
             }
         },
-        // Bower task sets up require config
-        bower: {
-            all: {
-                rjsConfig: 'js/global.js'
+        concat: {
+            options: {
+              separator: ';',
+            },
+            dist: {
+                src: ['js/*.js'],
+                dest: 'js/bundle.js',
+            },
+        },
+        uglify: {
+            production: {
+              files: {
+                'js/bundle.min.js': ['js/bundle.js']
+              }
             }
         },
         // Image min
@@ -131,10 +141,11 @@ module.exports = function (grunt) {
 
     // Build task
     grunt.registerTask('build', function () {
-        var arr = ['jshint'];
+        var arr = ['jshint', 'concat', 'uglify:production'];
 
         if (hasSass) {
             arr.push('sass:production');
+            arr.push('autoprefixer');
         }
 
         arr.push('imagemin:production', 'svgmin:production');
@@ -161,6 +172,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-svgmin');
