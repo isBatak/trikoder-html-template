@@ -1,72 +1,16 @@
-jQuery(document).ready(function ($) {
-/*
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-
-	var slideCount = $('#slider ul li').length;
-	var slideWidth = $('#slider ul li').width();
-	var slideHeight = $('#slider ul li').height();
-	var sliderUlWidth = slideCount * slideWidth;
-
-	$('#slider').css({ width: slideWidth, height: slideHeight });
-
-	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-*/
-});
-
-
 ;(function ( $, window, document, undefined ) {
 
-    // undefined is used here as the undefined global
-    // variable in ECMAScript 3 and is mutable (i.e. it can
-    // be changed by someone else). undefined isn't really
-    // being passed in so we can ensure that its value is
-    // truly undefined. In ES5, undefined can no longer be
-    // modified.
-
-    // window and document are passed through as local
-    // variables rather than as globals, because this (slightly)
-    // quickens the resolution process and can be more
-    // efficiently minified (especially when both are
-    // regularly referenced in your plugin).
-
-    // Create the defaults once
     var pluginName = "slider",
         defaults = {
             autoplay: false,
-            delay: 3000
+            delay: 3000,
+            animation: 1000,
+            startAtIndex: 0
         };
 
-    // The actual plugin constructor
     function Plugin( element, options ) {
-        this.element = element;
+        this.element = $(element);
 
-        // jQuery has an extend method that merges the
-        // contents of two or more objects, storing the
-        // result in the first object. The first object
-        // is generally empty because we don't want to alter
-        // the default options for future instances of the plugin
         this.options = $.extend( {}, defaults, options) ;
 
         this._defaults = defaults;
@@ -78,34 +22,112 @@ jQuery(document).ready(function ($) {
     Plugin.prototype = {
 
         init: function() {
-            // Place initialization logic here
-            // You already have access to the DOM element and
-            // the options via the instance, e.g. this.element
-            // and this.options
-            // you can add more functions like the one below and
-            // call them like so: this.yourOtherFunction(this.element, this.options).
-            var slides = (this.element.firstElementChild || this.element.children[0] || {} ).children,
-                slideCount = slides.length;
 
-            if(this.options.autoplay === true) {
-                self = this;
-                setInterval(function () {
-                    self.moveRight(self.element, self.options);
-                }, this.options.delay);
+            this.slides = this.element.find('.slider-inner-wrapper ul > li');
+            this.slideCount = this.slides.length;
+            this.images = this.slides.children('img');
+            this.imagesPreloadCount = this.images.length;
+            this.currentSlide = this.options.startAtIndex;
+
+            this.images.each( $.proxy( this.preload, this ) );
+
+
+        },
+
+        preload: function(index) {
+            var img = this.images[index];
+
+            // captions
+            var $img = $(img);
+            $img.after('<span class="slide-caption">' + img.alt + '</span>');
+
+            if( img.complete ) {
+                this.imageLoaded();
+            } else {
+                $(img).one('load', $.proxy( this.imageLoaded ) );
             }
         },
 
-        moveLeft: function(el, options) {
-            // some logic
+        imageLoaded: function() {
+            this.imagesPreloadCount--;
+            if( this.imagesPreloadCount === 0 ) {
+
+                this.createBullets();
+                this.showSlide(this.currentSlide);
+
+                this.autoPlay();
+            }
         },
 
-        moveRight: function(el, options) {
-            console.log("autoplay radi");
+        createBullets: function() {
+            var bulletsWrapper = $('<div/>', { class: 'slider-bullets-wrapper' });
+            var list = $('<ul/>');
+            for (var i = 0; i < this.slideCount; i++){
+                if(i == this.options.startAtIndex){
+                    list.append('<li class="selected" id="'+ i +'"></li>');
+                }
+                else{
+                    list.append('<li id="'+ i +'"></li>');
+                }
+            }
+            bulletsWrapper.append( list );
+
+            this.bullets = bulletsWrapper.find('li');
+            this.bullets.click( this, this.onBulletClick );
+
+            this.element.append( bulletsWrapper );
+        },
+
+        onBulletClick: function(e) {
+            var context = e.data;
+            context._reset();
+            context.currentSlide = $(e.currentTarget).attr('id');
+            context.updateBullets();
+            context.showSlide();
+        },
+
+        updateBullets: function() {
+            var active = this.bullets.eq(this.currentSlide);
+            active.addClass('selected').siblings().removeClass('selected');
+        },
+
+        autoPlay: function() {
+            if(this.options.autoplay === true) {
+                this.timer = setInterval( $.proxy( this.next, this ), this.options.delay);
+            }
+        },
+
+        _stop: function() {
+            if(this.options.autoplay === true) {
+                clearInterval(this.timer);
+            }
+        },
+
+        _reset: function() {
+            this._stop();
+            this.autoPlay();
+        },
+
+        next: function() {
+            if(this.currentSlide === (this.slideCount - 1)){
+                this.currentSlide = 0;
+            }
+            else{
+                this.currentSlide++;
+            }
+            this.updateBullets();
+            this.showSlide();
+        },
+
+        showSlide: function() {
+            this.activeSlide = this.slides.eq(this.currentSlide);
+            this.activeSlide.siblings().stop().animate({opacity: 0.0}, this.options.animation, function() {
+                $(this).css({visibility: "hidden"});
+            });
+            this.activeSlide.css({opacity: 0.0, visibility: "visible"}).stop().animate({opacity: 1.0}, this.options.animation);
         }
     };
 
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
     $.fn[pluginName] = function ( options ) {
         return this.each(function () {
             if (!$.data(this, "plugin_" + pluginName)) {
