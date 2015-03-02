@@ -5,7 +5,7 @@ Zahvaljujem se na prijavi za poziciju front-end developera te vam u nastavku mai
 Općenito
 - [ ] prilagodba je za sve aktualne verzije browsera (FF, CHROME, IE) + 2 verzije ispod
 - [ ] pristup prema funkcionalnostima koje nisu podržane od strane browsera je “gracefull degradation”
-- [ ] preporučeno je load-ati vanjske library/framework-e pomoću package managera (npr. bower)
+- [x] preporučeno je load-ati vanjske library/framework-e pomoću package managera (npr. bower)
 
 Priloženi design
 - [x] nije potrebno rezati dizajn u "pixel perfect” stilu, dopuštena su manja odstupanja od predloška
@@ -14,7 +14,7 @@ Priloženi design
 
 Responsive
 - [x] navigacija je slide from left
-- [ ] dopuštena je sloboda prikaza na tablet varijaciji
+- [x] dopuštena je sloboda prikaza na tablet varijaciji
 - [x] oprez, banner element mijenja poziciju ovisno o mobile i desktop varijaciji
 
 HTML
