@@ -23,7 +23,8 @@
 
         init: function() {
 
-            this.slides = this.element.find('.slider-inner-wrapper ul > li');
+            this.wrapper = this.element.find('.slider-inner-wrapper');
+            this.slides = this.wrapper.find('ul > li');
             this.slideCount = this.slides.length;
             this.images = this.slides.children('img');
             this.imagesPreloadCount = this.images.length;
@@ -51,6 +52,8 @@
         imageLoaded: function() {
             this.imagesPreloadCount--;
             if( this.imagesPreloadCount === 0 ) {
+
+                this.wrapper.css({ backgroundImage : 'none'});
 
                 this.createBullets();
                 this.showSlide(this.currentSlide);
