@@ -63,7 +63,7 @@
         },
 
         createBullets: function() {
-            var bulletsWrapper = $('<div/>', { class: 'slider-bullets-wrapper' });
+            var bulletsWrapper = $('<div/>', { 'class': 'slider-bullets-wrapper' });
             var list = $('<ul/>');
             for (var i = 0; i < this.slideCount; i++){
                 if(i == this.options.startAtIndex){

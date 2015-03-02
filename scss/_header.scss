@@ -24,9 +24,9 @@
 .brand {
     position: relative;
     z-index: 1;
-    input[type="search"] {
-        color: $secondary-color;
-        border-bottom: 1px solid $secondary-color;
+    input[type="search"], input {
+        color: $secondary-color !important;
+        border-bottom: 1px solid $secondary-color !important;
     }
     .logo{
         color: $secondary-color;
@@ -176,8 +176,8 @@
         z-index: 20;
         display: none;
         input[type="search"] {
-            color: $primary-color;
-            border-bottom: 1px solid $primary-color;
+            color: $primary-color !important;
+            border-bottom: 1px solid $primary-color !important;
             @include placeholder {
                 color: $primary-color;
             }

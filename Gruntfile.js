@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         },
         // JsHint your javascript
         jshint: {
-            all: ['js/*.js', '!js/modernizr.js', '!js/*.min.js', '!lib/**/*.js'],
+            all: ['js/*.js', 'js/plugins/*.js', '!js/modernizr.js', '!js/*.min.js', '!lib/**/*.js'],
             options: {
                 browser: true,
                 curly: false,
@@ -93,10 +93,10 @@ module.exports = function (grunt) {
         },
         concat: {
             options: {
-              separator: ';',
+                //separator: ';',
             },
             dist: {
-                src: ['js/*.js'],
+                src: ['js/plugins/*.js'],
                 dest: 'js/bundle.js',
             },
         },
@@ -150,7 +150,7 @@ module.exports = function (grunt) {
 
         arr.push('imagemin:production', 'svgmin:production');
 
-        return arr;
+        grunt.task.run(arr);
     });
 
     // Template Setup Task
@@ -162,6 +162,8 @@ module.exports = function (grunt) {
         }
 
         arr.push('bower-install');
+
+        grunt.task.run(arr);
     });
 
     // Load up tasks

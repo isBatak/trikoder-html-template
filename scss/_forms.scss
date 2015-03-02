@@ -16,6 +16,7 @@ input[type="search"] {
         size: 24px;
     }
     line-height: 50px;
+    height: 50px;
     &.big {
         width: 590px;
     }
@@ -60,6 +61,7 @@ input[type="search"] {
     input[type="password"],
     input[type="search"] {
         line-height: 30px;
+        height: 30px;
         font : {
             size: 13px;
         }

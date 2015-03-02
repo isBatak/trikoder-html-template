@@ -4,7 +4,7 @@ Zahvaljujem se na prijavi za poziciju front-end developera te vam u nastavku mai
 
 Općenito
 - [ ] prilagodba je za sve aktualne verzije browsera (FF, CHROME, IE) + 2 verzije ispod
-- [ ] pristup prema funkcionalnostima koje nisu podržane od strane browsera je “gracefull degradation”
+- [x] pristup prema funkcionalnostima koje nisu podržane od strane browsera je “gracefull degradation”
 - [x] preporučeno je load-ati vanjske library/framework-e pomoću package managera (npr. bower)
 
 Priloženi design
@@ -32,7 +32,7 @@ CSS
 
 Javascript
 - [x] odvojene JS komponente trebaju se nalaziti u odvojenim fileovima
-- [ ] potrebno je napravit grunt task za minifikaciju i concat JS fileova
+- [x] potrebno je napravit grunt task za minifikaciju i concat JS fileova
 
 Login
 - [x] potrebno je prikazati login unutar popupa i submitati formu pomoću AJAX-a na script.php (nalazi se unutar dropbox foldera)
