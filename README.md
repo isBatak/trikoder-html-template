@@ -3,7 +3,7 @@ Poštovani,
 Zahvaljujem se na prijavi za poziciju front-end developera te vam u nastavku maila šaljem zadatak.
 
 Općenito
-- [ ] prilagodba je za sve aktualne verzije browsera (FF, CHROME, IE) + 2 verzije ispod
+- [x] prilagodba je za sve aktualne verzije browsera (FF, CHROME, IE) + 2 verzije ispod
 - [x] pristup prema funkcionalnostima koje nisu podržane od strane browsera je “gracefull degradation”
 - [x] preporučeno je load-ati vanjske library/framework-e pomoću package managera (npr. bower)
 
