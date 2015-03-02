@@ -69,10 +69,13 @@
                 // display: inline-block;
                 float:left;
                 margin: 0 0 0 70px;
+                @media only screen and (max-width: $breakpoint-tablet) {
+                    margin: 0 0 0 40px;
+                }
                 a, span{
                     color: $text-color-semidark;
                     text-transform: uppercase;
-                    font-size: 18px;
+                    font-size: $base-font-size;
                     display: block;
                     padding: 23px 0;
                     border-bottom: 2px solid $secondary-color;
@@ -130,7 +133,7 @@
     }
 }
 
-@media only screen and (max-width: $breakpoint-medium) {
+@media only screen and (max-width: $breakpoint-mobile) {
     .outer-wrapper {
         position: relative;
         overflow: hidden;

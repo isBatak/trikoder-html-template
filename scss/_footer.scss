@@ -11,10 +11,17 @@
     p {
         margin: $gutter 0;
     }
-    @media only screen and (max-width: $breakpoint-medium) {
-        font-size: 13px;
+    @media only screen and (max-width: $breakpoint-tablet) {
         .copy {
             text-align: center;
+        }
+    }
+    @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 13px;
+        .copy {
+            p {
+                margin: $gutter;
+            }
         }
         p {
             margin: $gutter $gutter 0 $gutter;

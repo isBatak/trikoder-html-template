@@ -43,7 +43,18 @@ input[type="search"] {
     @extend %message;
 }
 
-@media only screen and (max-width: $breakpoint-medium) {
+@media only screen and (max-width: $breakpoint-tablet) {
+    input[type="email"],
+    input[type="text"],
+    input[type="password"],
+    input[type="search"] {
+        &.big {
+            width: 440px;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
     input[type="email"],
     input[type="text"],
     input[type="password"],

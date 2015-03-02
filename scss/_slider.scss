@@ -74,7 +74,7 @@
             }
         }
     }
-    @media only screen and (max-width: $breakpoint-medium) {
+    @media only screen and (max-width: $breakpoint-mobile) {
         background: $secondary-color;
         margin-bottom: 0;
         .slider-inner-wrapper {

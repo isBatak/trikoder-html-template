@@ -656,7 +656,7 @@ ol.numbers > li:before {
 }
 
 img {
-  width: auto;
+  width: 100%;
   max-width: 100%;
   height: auto !important;
 }
@@ -679,12 +679,7 @@ img {
   min-height: 1px;
 }
 
-@media only screen and (min-width: 30em) {
-  .container {
-    width: 95%;
-    max-width: 1170px;
-  }
-
+@media only screen and (min-width: 961px) {
   .col-1 {
     width: 8.33333%;
   }
@@ -731,6 +726,12 @@ img {
 
   .col-12 {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 30em) {
+  .container {
+    width: 95%;
+    max-width: 1170px;
   }
 }
 /* ==========================================================================
@@ -810,6 +811,11 @@ img {
 .mobile-friendly-menu nav ul li {
   float: left;
   margin: 0 0 0 70px;
+}
+@media only screen and (max-width: 961px) {
+  .mobile-friendly-menu nav ul li {
+    margin: 0 0 0 40px;
+  }
 }
 .mobile-friendly-menu nav ul li a, .mobile-friendly-menu nav ul li span {
   color: #666666;
@@ -1053,6 +1059,14 @@ input[type="search"].big {
   float: left;
 }
 
+@media only screen and (max-width: 961px) {
+  input[type="email"].big,
+  input[type="text"].big,
+  input[type="password"].big,
+  input[type="search"].big {
+    width: 440px;
+  }
+}
 @media only screen and (max-width: 30em) {
   input[type="email"],
   input[type="text"],
@@ -1348,12 +1362,17 @@ input[type="search"].big {
 .footer p {
   margin: 30px 0;
 }
+@media only screen and (max-width: 961px) {
+  .footer .copy {
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 30em) {
   .footer {
     font-size: 13px;
   }
-  .footer .copy {
-    text-align: center;
+  .footer .copy p {
+    margin: 30px;
   }
   .footer p {
     margin: 30px 30px 0 30px;
@@ -1380,7 +1399,7 @@ input[type="search"].big {
   padding: 60px;
   width: 460px;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 50%;
   margin-left: -230px;
   border-radius: 5px;

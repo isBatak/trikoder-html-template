@@ -9,7 +9,7 @@
 }
 
 img {
-    width: auto;
+    width: 100%;
     max-width: 100%;
     height: auto !important;
 }
@@ -34,15 +34,17 @@ img {
     width: 100%;
     min-height: 1px;
 }
-
-@media only screen and (min-width: $breakpoint-medium) {
-    .container {
-        width: 95%;
-        max-width: $grid-max-width;
-    }
+@media only screen and (min-width: $breakpoint-tablet) {
     @for $i from 1 through $grid-columns {
         .col-#{$i} {
             width: 100% / $grid-columns * $i;
         }
     }
+}
+@media only screen and (min-width: $breakpoint-mobile) {
+    .container {
+        width: 95%;
+        max-width: $grid-max-width;
+    }
+
 }

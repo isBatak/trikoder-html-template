@@ -19,7 +19,7 @@
         padding: $gutter*2;
         width: 460px;
         position: fixed;
-        top: 20%;
+        top: 10%;
         left: 50%;
         margin-left: -230px;
         border-radius: 5px;
@@ -70,7 +70,7 @@
     &.open {
         display: block;
     }
-    @media only screen and (max-width: $breakpoint-medium) {
+    @media only screen and (max-width: $breakpoint-mobile) {
         .box {
             padding: $gutter;
             width: 100%;

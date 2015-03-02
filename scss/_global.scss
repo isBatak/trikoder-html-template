@@ -16,7 +16,7 @@ ul {
 
 .main {
     padding-top: $gutter;
-    @media only screen and (max-width: $breakpoint-medium) {
+    @media only screen and (max-width: $breakpoint-mobile) {
         padding: 0;
     }
 }

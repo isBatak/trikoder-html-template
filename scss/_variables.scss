@@ -20,7 +20,8 @@ $base-line-height: 26px;
    Grid
    ========================================================================== */
 
-$breakpoint-medium : 30em;
+$breakpoint-mobile : 30em;
+$breakpoint-tablet : 961px;
 $grid-max-width : 1170px;
 $grid-columns : 12;
 $gutter: 30px;
