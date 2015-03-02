@@ -76,6 +76,7 @@
     }
     @media only screen and (max-width: $breakpoint-medium) {
         background: $secondary-color;
+        margin-bottom: 0;
         .slider-inner-wrapper {
             border-radius: 0;
             ul li .slide-caption {
@@ -86,6 +87,7 @@
                 font-size: 23px;
                 line-height: 35px;
                 padding-bottom: 0;
+                border-top: 10px solid $primary-color;
             }
         }
     }

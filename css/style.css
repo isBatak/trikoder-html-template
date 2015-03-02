@@ -576,6 +576,15 @@ ol.numbers > li:before {
   content: counter(item) ".";
 }
 
+@media only screen and (max-width: 30em) {
+  html, body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
 /* ==========================================================================
    Icons
    ========================================================================== */
@@ -1177,6 +1186,7 @@ input[type="search"].big {
 @media only screen and (max-width: 30em) {
   .slider-outer-wrapper {
     background: #ffffff;
+    margin-bottom: 0;
   }
   .slider-outer-wrapper .slider-inner-wrapper {
     border-radius: 0;
@@ -1189,6 +1199,7 @@ input[type="search"].big {
     font-size: 23px;
     line-height: 35px;
     padding-bottom: 0;
+    border-top: 10px solid #d04144;
   }
 }
 
@@ -1304,6 +1315,22 @@ input[type="search"].big {
   }
   .box.banner.mobile {
     display: block;
+    margin: 15px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+@media only screen and (max-width: 30em) {
+  .box {
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .box .info {
+    border-bottom: 1px solid #dedede;
+  }
+  .box .info > div > div {
+    font-size: 12px;
   }
 }
 
@@ -1321,7 +1348,6 @@ input[type="search"].big {
 .footer p {
   margin: 30px 0;
 }
-
 @media only screen and (max-width: 30em) {
   .footer {
     font-size: 13px;
@@ -1329,7 +1355,11 @@ input[type="search"].big {
   .footer .copy {
     text-align: center;
   }
+  .footer p {
+    margin: 30px 30px 0 30px;
+  }
 }
+
 .modal {
   position: fixed;
   top: 0;
@@ -1394,6 +1424,15 @@ input[type="search"].big {
 }
 .modal.open {
   display: block;
+}
+@media only screen and (max-width: 30em) {
+  .modal .box {
+    padding: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
 }
 
 .arrow-up {

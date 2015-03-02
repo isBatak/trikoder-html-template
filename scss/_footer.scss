@@ -11,13 +11,13 @@
     p {
         margin: $gutter 0;
     }
-}
-
-@media only screen and (max-width: $breakpoint-medium) {
-    .footer {
+    @media only screen and (max-width: $breakpoint-medium) {
         font-size: 13px;
         .copy {
             text-align: center;
+        }
+        p {
+            margin: $gutter $gutter 0 $gutter;
         }
     }
 }

@@ -112,3 +112,12 @@ ol.numbers {
 		}
 	}
 }
+
+@media only screen and (max-width: $breakpoint-medium) {
+	html, body{
+		font-size: 	$base-font-size - 4px;
+	}
+	h2 {
+		font-size: $base-font-size;
+	}
+}
